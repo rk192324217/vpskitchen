@@ -1,75 +1,68 @@
-  <header>
-    <nav class="navbar navbar-expand-lg shadow-sm">
-    <div class="header-container ">
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="header-container">
+
+      <!-- LEFT NAV -->
       <div class="left_logo">
         <ul class="nav-listing">
-          <!-- HOME -->
           <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            </li>
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
 
-            <!-- MENU -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="menu.html"
-                id="menuDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Menu
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="menuDropdown">
-                <li><a class="dropdown-item" href="menu.html#masalas">Masalas</a></li>
-                <li><a class="dropdown-item" href="menu.html#thokku">Thokku</a></li>
-                <li><a class="dropdown-item" href="menu.html#podi">Podi</a></li>
-                <li><a class="dropdown-item" href="menu.html#specials">Specials</a></li>
-              </ul>
-            </li>
-            <!-- ORDER NOW -->
-            <li class="nav-item">
-              <a class="nav-link" href="order.html">Ordering</a>
-            </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+              <li><a class="dropdown-item" href="menu.html#masalas">Masalas</a></li>
+              <li><a class="dropdown-item" href="menu.html#thokku">Thokku</a></li>
+              <li><a class="dropdown-item" href="menu.html#podi">Podi</a></li>
+              <li><a class="dropdown-item" href="menu.html#specials">Specials</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Ordering</a>
+          </li>
         </ul>
       </div>
-      <div>
+
+      <!-- CENTER LOGO -->
+      <div class="center_logo">
         <a class="navbar-brand brand-logo" href="index.html">
-        <img src="assets/images/logo.jpg" alt="Brand Logo">
+          <img src="assets/images/logo.png" alt="Brand Logo">
         </a>
       </div>
+
+      <!-- RIGHT NAV -->
       <div class="right_logo">
         <ul class="nav-listing">
-          <!-- RESOURCES -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources </a>
-              <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                <li><a class="dropdown-item" href="blogs.html">Blogs</a></li>
-                <li><a class="dropdown-item" href="recipes.html">Recipes</a></li>
-                <li><a class="dropdown-item" href="special-moments.html">Special Moments</a></li>
-              </ul>
-            </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Resources
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+              <li><a class="dropdown-item" href="blogs.html">Blogs</a></li>
+              <li><a class="dropdown-item" href="recipes.html">Recipes</a></li>
+              <li><a class="dropdown-item" href="special-moments.html">Special Moments</a></li>
+            </ul>
+          </li>
 
-            <!-- CONTACT -->
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-            
-            <!-- SEARCH -->
-            <li><form id="navSearchForm" class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search">
-            <input
-              class="form-control me-2 search"
-              type="search"
-              placeholder="Search masalas, recipes..."
-              aria-label="Search"
-              id="navSearchInput"
-            >
-            <button class="search-button" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
-          </form></li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+
+          <li>
+            <form class="nav-search">
+              <input type="search" placeholder="Search...">
+              <button type="submit">🔍</button>
+            </form>
+          </li>
         </ul>
-        
       </div>
+
     </div>
-  </header>
+  </nav>
+</header>

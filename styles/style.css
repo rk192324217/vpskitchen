@@ -1,0 +1,272 @@
+/* .progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 2000;
+  border-radius: 0;
+}
+
+.progress-bar {
+  transition: width 0.1s linear;
+} */
+
+
+/* Progress container */
+.progress.shooting-star {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;      /* invisible track */
+  z-index: 3000;
+  overflow: visible;
+}
+
+/* Shooting star */
+.progress-bar {
+  position: relative;
+  height: 100%;
+  width: 0%;
+  background: transparent;
+}
+
+/* STAR HEAD */
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+
+  background: white;
+  box-shadow:
+    0 0 6px white,
+    0 0 14px rgba(255, 255, 255, 0.9),
+    0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+/* TRAILING TAIL */
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 60px;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.0),
+    rgba(255,255,255,0.8),
+    rgba(255,255,255,0.0)
+  );
+
+  filter: blur(2px);
+}
+
+
+/* ===========================
+   SECTION BASE
+=========================== */
+.index_section_1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.92);
+  overflow: hidden;
+}
+
+/* ===========================
+   MAIN GRID
+=========================== */
+.section_1_grid_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+}
+
+/* ===========================
+   LEFT GRID
+=========================== */
+.section_1_grid_11 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Logo */
+.logo_spinner {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: url("../assets/images/logo.png") center/cover no-repeat;
+
+  opacity: 0;
+  transform: scale(0.8);
+  animation: logoFadeIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Moto */
+.company_moto {
+  font-size: clamp(2.6rem, 4vw, 4.2rem);
+  font-weight: 700;
+  text-align: center;
+  color: #d2b48c;
+  letter-spacing: 1px;
+  max-width: 90%;
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: motoReveal 0.9s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+/* ===========================
+   RIGHT GRID
+=========================== */
+.section_1_grid_12 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stack container */
+.stack {
+  position: relative;
+  width: 300px;
+  height: 360px;
+}
+
+.box {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+
+  background: linear-gradient(145deg, #6f4e37, #3b2418);
+  border-radius: 16px;
+  box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(-300px);
+  animation: fallAndStay 0.9s cubic-bezier(.25,.8,.25,1) forwards;
+}
+.box a {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+}
+
+/* Stack positioning & delays */
+.b1 { bottom: 0;   animation-delay: 0.0s; }
+.b2 { bottom: 70px;  animation-delay: 0.6s; }
+.b3 { bottom: 140px; animation-delay: 1.2s; }
+.b4 { bottom: 210px; animation-delay: 1.8s; }
+.b5 { bottom: 280px; animation-delay: 2.4s; }
+/* ===========================
+   ANIMATIONS
+=========================== */
+@keyframes fallAndStay {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(10px); /* soft impact */
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(2);
+  }
+}
+
+@keyframes motoReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 900px) {
+  .section_1_grid_1 {
+    grid-template-columns: 1fr;
+  }
+
+  .section_1_grid_12 {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .index_section_1 {
+    position: relative;
+    width: 100vw;
+    height: 100vh; 
+    background:rgba(0, 0, 0, 0.90);
+    overflow: hidden;
+}
+.section_1_grid_1{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+    width:100%;
+    height:100%;
+    padding:0px 20px 0px 20px;
+}
+.section_1_grid_11{
+    display:grid;
+    grid-template-columns:auto;
+    grid-template-rows:1fr 1fr;
+    width:100%;
+    height:100%;
+}
+.section_1_grid_12{
+    display:block;
+    width:100%;
+    height:100%;
+} */
+
+main {
+  margin-top: 0;
+}
