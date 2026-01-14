@@ -182,14 +182,14 @@
 /* ===========================
    ANIMATIONS
 =========================== */
-@keyframes fallAndStay {
+/* @keyframes fallAndStay {
   0% {
     transform: translateY(-300px);
     opacity: 0;
   }
 
   70% {
-    transform: translateY(10px); /* soft impact */
+    transform: translateY(10px); 
     opacity: 1;
   }
 
@@ -197,7 +197,7 @@
     transform: translateY(0);
     opacity: 1;
   }
-}
+} */
 
 @keyframes logoFadeIn {
   to {
@@ -270,3 +270,278 @@
 main {
   margin-top: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   SECTION BASE
+================================ */
+.special-carousel-section {
+  padding: 80px 0;
+  background: #0e0e0e;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ===============================
+   HEADER + CONTROLS
+================================ */
+.carousel-header {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-header h2 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.carousel-controls button {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  font-size: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ===============================
+   CAROUSEL LAYOUT
+================================ */
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.6s cubic-bezier(.25,.8,.25,1);
+}
+
+/* ===============================
+   CARDS
+================================ */
+.carousel-card {
+  min-width: 260px;
+  height: 340px;
+
+  background: linear-gradient(145deg, #6f4e37, #3b2418);
+  border-radius: 20px;
+
+  padding: 30px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+
+  opacity: 0.4;
+  transform: scale(0.85);
+
+  transition: all 0.5s ease;
+}
+
+/* Highlighted center card */
+.carousel-card.active {
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.carousel-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.carousel-card p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+
+
+/* INSTAGRAM */
+/* ===============================
+   INSTAGRAM SECTION BASE
+================================ */
+.instagram_content {
+  padding: 80px 0;
+  background: #0e0e0e;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.instagram_header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instagram_header h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.instagram_header span {
+  color: #d2b48c;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   SCROLL TRAY
+================================ */
+.instagram_tray {
+  display: flex;
+  gap: 24px;
+  padding: 0 20px 20px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.instagram_tray::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===============================
+   CARD
+================================ */
+.insta_card {
+  min-width: 220px;
+  height: 390px;
+
+  background: #111;
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow: 0 14px 30px rgba(0,0,0,0.5);
+
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.insta_card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===============================
+   VIDEO PLACEHOLDER
+================================ */
+.insta_video_placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(145deg, #6f4e37, #3b2418);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+/* Youtube *
+/
+/* ===============================
+   YOUTUBE SECTION
+================================ */
+.youtube_content {
+  padding: 90px 20px;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+/* Header */
+.youtube_header {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.youtube_header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.youtube_header p {
+  color: #c9c9c9;
+  max-width: 500px;
+}
+
+/* Grid */
+.youtube_grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
+.youtube_card {
+  cursor: pointer;
+}
+
+.yt_thumbnail {
+  position: relative;
+  height: 180px;
+  border-radius: 16px;
+
+  background: linear-gradient(145deg, #6f4e37, #3b2418);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease;
+}
+
+.youtube_card:hover .yt_thumbnail {
+  transform: scale(1.04);
+}
+
+.play_icon {
+  font-size: 3rem;
+  color: white;
+  opacity: 0.9;
+}
+
+.youtube_card h4 {
+  margin-top: 14px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+

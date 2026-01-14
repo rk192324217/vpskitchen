@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadPartial("pages/header.html", "header");
   loadPartial("pages/footer.html", "footer");
-  loadPartial("pages/review_cards.html", "customer_review");
+  loadPartial("pages/review_cards.html", "customer_review_section");
 
   /* -------------------------------
      SCROLL PROGRESS BAR
@@ -104,3 +104,39 @@ document.addEventListener("DOMContentLoaded", () => {
   updateScrollProgress();
 
 });
+
+
+
+  const track = document.querySelector(".carousel-track");
+  const cards = Array.from(document.querySelectorAll(".carousel-card"));
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+
+  let currentIndex = 1; // center item initially
+
+  function updateCarousel() {
+    cards.forEach(card => card.classList.remove("active"));
+
+    cards[currentIndex].classList.add("active");
+
+    const cardWidth = cards[0].offsetWidth + 40; // card + gap
+    const offset = -(currentIndex - 1) * cardWidth;
+
+    track.style.transform = `translateX(${offset}px)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < cards.length - 2) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 1) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  updateCarousel();
