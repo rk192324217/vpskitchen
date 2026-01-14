@@ -1,79 +1,47 @@
-/* ===============================
-   CUSTOMER REVIEWS
-================================ */
-.customer_review {
-  padding: 90px 0;
-  background: #0f0f0f;
-  color: #fff;
-}
-
-/* Header */
-.review_header {
-  max-width: 1200px;
-  margin: 0 auto 40px;
-  padding: 0 20px;
-}
-
-.review_header h2 {
-  font-size: 2.2rem;
-}
-
-/* Tray */
-.review_tray {
+.scroller {
+  width: 100%;
   display: flex;
-  gap: 24px;
-  padding: 0 20px 20px;
-
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  background:black;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
 }
 
-.review_tray::-webkit-scrollbar {
+.scroller::-webkit-scrollbar{
   display: none;
 }
-
-/* Card */
-.review_card {
-  min-width: 320px;
-  background: #161616;
-  border-radius: 18px;
-  padding: 26px;
-
-  scroll-snap-align: start;
-
-  box-shadow: 0 10px 28px rgba(0,0,0,0.4);
-}
-
-.review_user {
+.group {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
-}
-
-.avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #6f4e37;
-  display: flex;
-  align-items: center;
+  gap: 1em;
   justify-content: center;
-  font-weight: 600;
+  animation: spin 20s linear infinite;
+  padding-right: 1em;
+  background: black;
 }
 
-.review_user h4 {
-  margin: 0;
-  font-size: 0.95rem;
+.card {
+  background: linear-gradient(145deg, #6f4e37, #3b2418);
+  flex: 0 0 20em;
+  height: 12em;
+  width: 20em;
+  padding: 1em;
+  text-align: center;
+  align-items: center;
+  color: white;
+  border-radius: 12px;
 }
 
-.review_user span {
-  font-size: 0.8rem;
-  color: #d2b48c;
+.review-stars {
+  padding: none;
+  margin: none;
 }
 
-.review_card p {
-  font-size: 0.95rem;
-  color: #e0e0e0;
-  line-height: 1.5;
+
+@keyframes spin
+{
+  from {translate: 0;}
+  to {translate: -100%;}
 }
