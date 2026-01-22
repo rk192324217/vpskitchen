@@ -184,3 +184,174 @@ header {
 body {
   padding-top: 0px;
 }
+
+
+/* Footer */
+/* ===============================
+   FOOTER BASE
+================================ */
+.footer-section {
+  background: #0f0f0f;
+  color: #cfcfcf;
+  padding: 4rem 0 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-title a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.footer-title a:hover {
+  font-weight: 700;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.footer-desc a {
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #aaaaaa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-desc a:hover {
+  color: #ffffff;
+  font-weight: 500;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   HEADINGS & LINKS
+================================ */
+.footer-heading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: #bdbdbd;
+  font-size: 0.88rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.25s ease;
+}
+
+.footer-links i {
+  font-size: 0.9rem;
+  transition: transform 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  font-weight: 600;
+  transform: translateY(-2px);
+}
+
+.footer-links a:hover i {
+  transform: scale(1.15);
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================ */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  background: #1a1a1a;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #ffffff;
+  color: #0f0f0f;
+  transform: translateY(-4px) scale(1.08);
+}
+
+/* ===============================
+   FOOTER BOTTOM
+================================ */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9a9a9a;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: font-weight 0.2s ease;
+}
+
+.footer-bottom a:hover {
+  font-weight: 600;
+}
+
+/* ===============================
+   RESPONSIVE MEDIA QUERIES
+================================ */
+
+/* Large desktops */
+@media (min-width: 1200px) {
+  .footer-section {
+    padding: 5rem 0 2.5rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .footer-social {
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-title a {
+    font-size: 1.25rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-links a {
+    justify-content: center;
+  }
+}

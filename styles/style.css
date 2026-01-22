@@ -528,3 +528,82 @@ main {
     display: none;
   }
 }
+
+
+/* Whatsapp Section Start */
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  animation: whatsapp-pulse 2.5s infinite;
+  transition: all 0.3s ease;
+}
+
+/* Hover pauses pulse (premium feel) */
+.whatsapp-float:hover {
+  animation-play-state: paused;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.55);
+}
+
+/* Icon */
+.whatsapp-float i {
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover i {
+  transform: scale(1.15);
+}
+
+/* ===============================
+   PULSE KEYFRAMES
+================================ */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    font-size: 1.45rem;
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+/* Whatsapp Section End */
